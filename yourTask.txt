@@ -1,0 +1,8 @@
+1.      See the file public/js/app.js ,
+        here you can see i am posting the data of that btn to server.js
+
+2.      Go to server.js and find there will bw a route -- app.post('/update-cart',(req,res)=>{}
+        Here we are gettin all the data of that btn to server
+
+3.       You have to build a logic so that we can console id, name, quantity of that id and total quantity
+
