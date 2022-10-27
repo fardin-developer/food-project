@@ -91,6 +91,8 @@ app.post('/update-cart', (req, res) => {
 
 
 
+    console.log(req.body);
+
     // if (!req.session.cart) {
     // }else if (req.session.cart.id==req.body._id) {
     //     req.session.cart={
