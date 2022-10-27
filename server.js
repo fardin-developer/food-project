@@ -63,7 +63,9 @@ app.get('/cart',(req,res)=>{
 });
 
 app.post('/update-cart',(req,res)=>{
+    
 
+    console.log("req.body");
 
     // if (!req.session.cart) {
     //     req.session.cart={
