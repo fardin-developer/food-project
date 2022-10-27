@@ -1,8 +1,8 @@
 let addToCart = document.querySelectorAll('.add-to-cart');
-    
-    function updateCart(pizza){
-    
-    
+
+const updateCart = async (pizza) => {
+
+
     const options = {
         method: 'POST', // or 'PUT'
         headers: {
@@ -11,7 +11,7 @@ let addToCart = document.querySelectorAll('.add-to-cart');
         body: pizza
     }
 
-    fetch('/update-cart', options)
+    await fetch('/update-cart', options)
 }
 
 
@@ -19,10 +19,8 @@ let addToCart = document.querySelectorAll('.add-to-cart');
 
 addToCart.forEach((btn) => {
     btn.addEventListener('click', () => {
-
         let pizza = btn.dataset.pizza;
         pizza = JSON.parse(JSON.stringify(pizza));
-        // console.log(pizza);
         updateCart(pizza);
     });
 });
